@@ -1,5 +1,5 @@
-from tkinter import *
-import qrcode
+from tkinter import *      #import tkinter using pip install tkinter on terminal
+import qrcode              #import qrcode
 
 root = Tk()
 root.title("QR generator")
@@ -11,7 +11,7 @@ def generate():
     name=title.get()
     text=entry.get()
     qr=qrcode.make(text)
-    qr.save("assets/Qrcode_Generator/"+str(name)+".png")
+    qr.save("assets/Qrcode_Generator/"+str(name)+".png")     #Give the path where you wants the Qr to be saved 
 
 Label(root,text="Title",fg="black",bg="yellow",font=20).place(x=50,y=160)
 
